@@ -5,9 +5,9 @@ export default {
 </script>
 
 <template>
-    <header>
+    <main>
         ---- Main ----
-    </header>
+    </main>
 </template>
 
 <style></style>
