@@ -17,8 +17,16 @@ export default {
                 return '';
             }
         },
+        // fiveStars() {
+        //     return Math.ceil((this.voto / 10) * 5);
+        // },
         fiveStars() {
-            return Math.ceil((this.voto / 10) * 5);
+            const fullStars = Math.ceil((this.voto / 10) * 5);
+            const emptyStars = 5 - fullStars;
+            return {
+                full: Array(fullStars).fill('fa-solid fa-star'),
+                empty: Array(emptyStars).fill('fa-regular fa-star'),
+            };
         },
     },
 };
@@ -49,7 +57,13 @@ export default {
                 </div>
                 <p v-else>Lingua: {{ lingua }}</p>
 
-                <p>Voto: {{ fiveStars }} <font-awesome-icon icon="fa-solid fa-user-secret" /></p>
+                <!-- <p>Voto: {{ fiveStars }} <font-awesome-icon icon="fa-solid fa-star" /><font-awesome-icon
+                        icon="fa-regular fa-star" /></p> -->
+                <p>
+                    Voto:
+                    <font-awesome-icon v-for="star in fiveStars.full" :icon="star" />
+                    <font-awesome-icon v-for="star in fiveStars.empty" :icon="star" />
+                </p>
             </li>
         </ul>
     </div>
