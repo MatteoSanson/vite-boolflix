@@ -2,7 +2,7 @@
 import { store } from '../../store';
 
 export default {
-    name: 'MovieCard',
+    name: 'ItemCard',
     props: ['titolo', 'original', 'lingua', 'voto'],
     data() {
         return {
@@ -17,15 +17,9 @@ export default {
         <ul>
             <li>
                 <h3>Titolo: {{ titolo }}</h3>
-            </li>
-            <li>
-                <h3>Titolo originale: {{ original }}</h3>
-            </li>
-            <li>
-                <h3>Lingua: {{ lingua }}</h3>
-            </li>
-            <li>
-                <h3>Voto: {{ voto }}</h3>
+                <h4>Titolo originale: {{ original }}</h4>
+                <p>Lingua: {{ lingua }}</p>
+                <p>Voto: {{ voto }}</p>
             </li>
         </ul>
     </div>

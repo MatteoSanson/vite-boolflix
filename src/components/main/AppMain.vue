@@ -1,12 +1,12 @@
 <script>
 import SearchNav from './SearchNav.vue';
-import MovieList from './MovieList.vue';
+import ContentList from './ContentList.vue';
 
 export default {
     name: 'AppMain',
     components: {
         SearchNav,
-        MovieList,
+        ContentList,
     }
 };
 </script>
@@ -14,7 +14,7 @@ export default {
 <template>
     <main>
         <SearchNav />
-        <MovieList />
+        <ContentList />
     </main>
 </template>
 
