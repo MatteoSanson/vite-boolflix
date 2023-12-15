@@ -3,12 +3,21 @@ import { store } from '../../store';
 
 export default {
     name: 'ItemCard',
-    props: ['titolo', 'original', 'lingua', 'voto'],
+    props: ['titolo', 'original', 'lingua', 'voto', 'img'],
     data() {
         return {
             store,
         }
-    }
+    },
+    computed: {
+        imgURL() {
+            if (this.img) {
+                return store.imgURL + this.img;
+            } else {
+                return '';
+            }
+        },
+    },
 };
 </script>
 
@@ -16,6 +25,7 @@ export default {
     <div>
         <ul>
             <li>
+                <img :src="imgURL" :alt="titolo">
                 <h3>Titolo: {{ titolo }}</h3>
                 <h4>Titolo originale: {{ original }}</h4>
                 <div class="language" v-if="lingua === 'it'">

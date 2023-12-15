@@ -20,7 +20,7 @@ export default {
         <div v-if="store.listaMovie.length">
             <h2>Movies</h2>
             <ItemCard v-for="movie in store.listaMovie" :titolo="movie.title" :original="movie.original_title"
-                :lingua="movie.original_language" :voto="movie.vote_average" />
+                :lingua="movie.original_language" :voto="movie.vote_average" :img="movie.poster_path" />
         </div>
         <div v-if="store.listaSeries.length">
             <h2>Series</h2>
