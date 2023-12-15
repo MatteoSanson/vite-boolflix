@@ -25,7 +25,7 @@ export default {
         <div v-if="store.listaSeries.length">
             <h2>Series</h2>
             <ItemCard v-for="series in store.listaSeries" :titolo="series.name" :original="series.original_name"
-                :lingua="series.original_language" :voto="series.voto_average" :img="series.poster_path" />
+                :lingua="series.original_language" :voto="series.vote_average" :img="series.poster_path" />
         </div>
     </div>
 </template>

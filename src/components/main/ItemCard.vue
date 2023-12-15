@@ -17,6 +17,9 @@ export default {
                 return '';
             }
         },
+        fiveStars() {
+            return Math.ceil((this.voto / 10) * 5);
+        },
     },
 };
 </script>
@@ -46,7 +49,7 @@ export default {
                 </div>
                 <p v-else>Lingua: {{ lingua }}</p>
 
-                <p>Voto: {{ voto }}</p>
+                <p>Voto: {{ fiveStars }}</p>
             </li>
         </ul>
     </div>
