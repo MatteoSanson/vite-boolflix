@@ -4,6 +4,7 @@ import AppMain from './components/main/AppMain.vue';
 import AppFooter from './components/footer/AppFooter.vue';
 
 export default {
+  name: 'App',
   data() {
     return {
 

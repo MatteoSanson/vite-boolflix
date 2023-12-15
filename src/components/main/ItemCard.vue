@@ -49,7 +49,7 @@ export default {
                 </div>
                 <p v-else>Lingua: {{ lingua }}</p>
 
-                <p>Voto: {{ fiveStars }}</p>
+                <p>Voto: {{ fiveStars }} <font-awesome-icon icon="fa-solid fa-user-secret" /></p>
             </li>
         </ul>
     </div>
