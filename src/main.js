@@ -2,6 +2,9 @@ import { createApp } from 'vue';
 /* file stile */
 import './assets/scss/style.scss';
 
+// import roboto font 
+import "@fontsource/roboto";
+
 import App from './App.vue';
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core';
