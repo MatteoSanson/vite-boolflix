@@ -1,2 +1,8 @@
 @use './partials/variables.scss' as *;
 @use './partials/fonts.scss' as *;
+// import bootstrap
+@import "bootstrap/scss/bootstrap";
+
+body {
+    color: $primary-color;
+}
