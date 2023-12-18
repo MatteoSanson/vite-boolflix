@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template>
-    <main>
+    <main class="d-flex flex-column align-items-center">
         <SearchNav />
         <ContentList />
     </main>
