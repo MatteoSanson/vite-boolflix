@@ -1,5 +1,7 @@
 import { createApp } from 'vue';
-import './style.css';
+/* file stile scss*/
+import './style.scss';
+
 import App from './App.vue';
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core';
