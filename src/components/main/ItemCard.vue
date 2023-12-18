@@ -17,9 +17,6 @@ export default {
                 return '';
             }
         },
-        // fiveStars() {
-        //     return Math.ceil((this.voto / 10) * 5);
-        // },
         fiveStars() {
             const fullStars = Math.ceil((this.voto / 10) * 5);
             const emptyStars = 5 - fullStars;
@@ -36,29 +33,28 @@ export default {
     <div>
         <ul>
             <li>
-                <img :src="imgURL" :alt="titolo">
+                <img :src="imgURL" :alt="titolo" class="img-fluid">
                 <h3>Titolo: {{ titolo }}</h3>
                 <h4>Titolo originale: {{ original }}</h4>
-                <div class="language" v-if="lingua === 'it'">
-                    <p>
+                <div class="language d-flex align-items-center justify-content-between" v-if="lingua === 'it'">
+                    <p class="mb-0">
                         Lingua: {{ lingua }}
                     </p>
-                    <div class="img-container">
-                        <img src="../../assets/pics/istockphoto-166053218-612x612.jpg" alt="">
+                    <div class="img-content d-flex align-item-center">
+                        <img src="../../assets/pics/istockphoto-166053218-612x612.jpg" alt="Italian flag"
+                            class="img-fluid d-block">
                     </div>
                 </div>
-                <div class="language" v-else-if="lingua === 'en'">
-                    <p>
+                <div class="language d-flex align-items-center justify-content-between" v-else-if="lingua === 'en'">
+                    <p class="mb-0">
                         Lingua: {{ lingua }}
                     </p>
-                    <div class="img-container">
-                        <img src="../../assets/pics/Flag_of_Great_Britain_(English_version).png" alt="">
+                    <div class="img-content d-flex align-item-center">
+                        <img src="../../assets/pics/Flag_of_Great_Britain_(English_version).png" alt="Great Britain flag"
+                            class="img-fluid d-block">
                     </div>
                 </div>
-                <p v-else>Lingua: {{ lingua }}</p>
-
-                <!-- <p>Voto: {{ fiveStars }} <font-awesome-icon icon="fa-solid fa-star" /><font-awesome-icon
-                        icon="fa-regular fa-star" /></p> -->
+                <p v-else class="mb-0">Lingua: {{ lingua }}</p>
                 <p>
                     Voto:
                     <font-awesome-icon v-for="star in fiveStars.full" :icon="star" />
@@ -69,21 +65,13 @@ export default {
     </div>
 </template>
 
-<style>
+<style scopeds lang="scss">
 .language {
-    display: flex;
-    width: 100px;
-    align-items: center;
-    justify-content: space-between;
+    width: 110px;
 }
 
-.img-container {
+.img-content {
     width: 25px;
     height: 20px;
-    object-fit: contain;
-}
-
-.img-container img {
-    width: 100%;
 }
 </style>
