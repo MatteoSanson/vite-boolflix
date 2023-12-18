@@ -18,4 +18,10 @@ export default {
     </main>
 </template>
 
-<style></style>
+<style scoped lang="scss">
+@use '../../assets/scss/partials/variables.scss' as *;
+
+main {
+    background-color: $secondary-bg-color;
+}
+</style>
