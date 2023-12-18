@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
-/* file stile scss*/
-import './style.scss';
+/* file stile */
+import './assets/scss/style.scss';
 
 import App from './App.vue';
 /* import the fontawesome core */
